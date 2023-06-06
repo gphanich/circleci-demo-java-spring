@@ -61,7 +61,6 @@ jobs:
       - run:
           name: Assemble JAR
           command: |
-             # Only execute on the first node
             if [ "$CIRCLE_NODE_INDEX" == 0 ]; then
               ./gradlew assemble
             fi
